@@ -1,6 +1,39 @@
-@import "_partials/typho.css";
-@import "_partials/debug.css";
-@import "_partials/common.css";
+main .-lc-jumbo,
+main .-lc-about {
+  background-color: var(--jumbo-bg);
+}
+main .-lc-portfolio,
+main .-lc-contact-me {
+  color: var(--dark-blue-600);
+}
+
+.-lc-green-text {
+  color: var(--jumbo-bg);
+}
+
+/*
+?------------
+!COMMON 
+?------------
+*/
+h1 {
+  font-size: 2.8125rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+
+/*
+?------------
+!FOOTER 
+?------------
+*/
+.-lc-bottom-footer {
+  font-size: 0.625rem;
+}
 
 /* !componenets */
 @import "../components/icon-separator.css";
