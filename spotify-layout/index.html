@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Web</title>
+    <!-- *favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <!-- *favicon/ -->
+
+    <!-- *fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/d7e1ca7451.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- *fontawesome/ -->
+    <!-- *google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- *google font/ -->
+    <!-- *link al css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- *link al css/ -->
+  </head>
+  <body>
+    <!-- *corpo centrale della pagina -->
+    <main class="flex">
+      <!-- ?barra di navigazione a sinistra -->
+      <nav class="flex">
+        <img
+          class="only-mobile mb15"
+          src="img/logo-small.svg"
+          alt="logo-small"
+        />
+        <img class="none big-logo mb30" src="img/logo.svg" alt="logo" />
+
+        <!-- lista icone -->
+        <ul class="icon flex mb30">
+          <li id="nav-green" class="mb10">
+            <img class="vertical-align" src="img/home.svg" alt="home" />
+            <span class="none bold white vertical-align">Home</span>
+          </li>
+          <li class="mb10">
+            <img class="vertical-align" src="img/search.svg" alt="search" />
+            <span class="none vertical-align">Cerca</span>
+          </li>
+          <li class="mb10">
+            <img class="vertical-align" src="img/libreria.svg" alt="libreria" />
+            <span class="none vertical-align">La tua libreria</span>
+          </li>
+        </ul>
+        <!-- lista icone/ -->
+
+        <!-- lista playlist -->
+        <div class="playlist none-flex">
+          <div class="white bold mb5">PLAYLIST</div>
+          <div class="list">
+            <ul>
+              <li class="mb15">
+                <i class="fa-solid fa-square-plus vertical-align"></i
+                ><span class="vertical-align">Crea Playlist</span>
+              </li>
+              <li class="mb15"><span class="none">Nome playlist</span></li>
+              <li class="mb15"><span class="none">Nome playlist</span></li>
+              <li class="mb15"><span class="none">Nome playlist</span></li>
+              <li class="mb15"><span class="none">Nome playlist</span></li>
+              <li class="mb15"><span class="none">Nome playlist</span></li>
+              <li class="mb15"><span class="none">Nome playlist</span></li>
+              <li class="mb15"><span class="none">Nome playlist</span></li>
+              <li class="mb15"><span class="none">Nome playlist</span></li>
+            </ul>
+          </div>
+        </div>
+        <!-- lista playlist/ -->
+
+        <!-- donwload e profilo del nav -->
+        <div class="bottom-nav flex">
+          <div>
+            <img
+              class="donwload vertical-align"
+              src="img/download.svg"
+              alt="download"
+            />
+            <span class="none vertical-align">Installa app</span>
+          </div>
+
+          <div class="john-doe">
+            <img
+              class="nav-profile br50 vertical-align"
+              src="img/profile.svg"
+              alt="profile"
+            />
+            <span class="none vertical-align bold white">John Doe</span>
+          </div>
+        </div>
+        <!-- donwload e profilo del nav / -->
+      </nav>
+      <!-- ?barra di navigazione a sinistra/ -->
+
+      <!-- ?parte principale del sito -->
+      <div class="myspotify">
+        <!-- !parte alta col bottone -->
+        <div class="top-myspotify">
+          <button class="btn">
+            <a href="premium.html"
+              ><span class="mais">effettua l' upgrade</span></a
+            >
+          </button>
+        </div>
+        <!-- !parte alta col bottone /-->
+
+        <!-- !corpo principlae con canzoni -->
+        <div class="bottom-myspotify">
+          <!-- ?menu -->
+          <div class="bottom-myspotify-menu text-center mb15">
+            <a class="bottom-green bold mr30" href=""
+              ><span class="mais">in evidenza</span></a
+            >
+            <a class="bottom-green bold mr30" href=""
+              ><span class="mais">podcast</span></a
+            >
+            <a class="bottom-green bold mr30" href=""
+              ><span class="mais">classifiche</span></a
+            >
+            <a class="bottom-green bold mr30" href=""
+              ><span class="mais">generi e mood</span></a
+            >
+            <a class="bottom-green bold mr30" href=""
+              ><span class="mais">nuove uscite</span></a
+            >
+            <a class="bottom-green bold mr30" href=""
+              ><span class="mais">scopri</span></a
+            >
+          </div>
+          <!-- ?menu/ -->
+
+          <!-- ?musica riprodotta di recente -->
+          <section class="recently-played mb40">
+            <h2 class="mb35">Recently Played</h2>
+            <div class="grid flex">
+              <!-- canzone 1 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img src="img/metal_lifting.jpg" alt="metal_lifting" />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <div class="song-text text-center">
+                  <h3 class="mb10">Heavy Metal</h3>
+                  <div>Subtitle</div>
+                </div>
+              </div>
+              <!-- canzone 1/ -->
+
+              <!-- canzone 2 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img src="img/stranger.jpeg" alt="stranger things" />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <div class="song-text text-center">
+                  <h3 class="mb10">
+                    Stranger Things, Vol. 1 (a Netflix Original Series
+                    Soundtrack)
+                  </h3>
+                  <div>Kyle Dixon & Michael Stein</div>
+                </div>
+              </div>
+              <!-- canzone 2/ -->
+
+              <!-- canzone 3 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img src="img/aquietplace.jpeg" alt="quiet place" />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <div class="song-text text-center">
+                  <h3 class="mb10">A quiet place</h3>
+                  <div>Subtitle</div>
+                </div>
+              </div>
+              <!-- canzone 3/ -->
+
+              <!-- canzone 4 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img src="img/split.jpeg" alt="split" />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <div class="song-text text-center">
+                  <h3 class="mb10">Split</h3>
+                  <div>Subtitle</div>
+                </div>
+              </div>
+              <!-- canzone 4/ -->
+
+              <!-- canzone 5 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img src="img/cure.jpeg" alt="cure" />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <div class="song-text text-center">
+                  <h3 class="mb10">A cure for wellness</h3>
+                  <div>Subtitle</div>
+                </div>
+              </div>
+              <!-- canzone 5/ -->
+
+              <!-- canzone 6 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img src="img/sinister.jpeg" alt="sinister" />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <div class="song-text text-center">
+                  <h3 class="mb10">Sinister</h3>
+                  <div>Subtitle</div>
+                </div>
+              </div>
+              <!-- canzone 6/ -->
+            </div>
+          </section>
+          <!-- ?musica riprodotta di recente/ -->
+
+          <!-- ?creato per me -->
+          <section class="made-for-you mb40">
+            <h2 class="mb10">Creato per John Doe</h2>
+            <div class="mb30">
+              Più scolti, più accurati saranno i suggerimenti
+            </div>
+            <div class="grid flex">
+              <!-- suggerimento 1 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img src="img/radar.jpeg" alt="release radar" />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <div class="song-text text-center">
+                  <h3>Release Radar</h3>
+                </div>
+              </div>
+              <!-- suggerimento 1/ -->
+
+              <!-- suggerimento 2 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img src="img/mixdaily.jpeg" alt="daily mix" />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <div class="song-text text-center">
+                  <h3>Daily Mix 1</h3>
+                </div>
+              </div>
+              <!-- suggerimento 2/ -->
+            </div>
+          </section>
+          <!-- ?creato per me/ -->
+
+          <!-- ?artisti di tendenza -->
+          <section class="popular-artists">
+            <h2 class="mb10">Artisti più popolari</h2>
+            <div class="mb30">
+              Più scolti, più accurati saranno i suggerimenti
+            </div>
+            <div class="grid flex">
+              <!-- artista 1 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img
+                    class="br50 mb20"
+                    src="img/youg.jpeg"
+                    alt="lana del rey"
+                  />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+
+                <div class="song-text text-center">
+                  <h3>Lana del Rey</h3>
+                </div>
+              </div>
+              <!-- artista 1/ -->
+
+              <!-- artista 2 -->
+              <div class="grid-element">
+                <div class="img-container mb20">
+                  <img class="br50 mb20" src="img/einaudi.jpeg" alt="Einaudi" />
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+                <div class="song-text text-center">
+                  <h3>Einaudi</h3>
+                </div>
+              </div>
+              <!-- artista 2/ -->
+            </div>
+          </section>
+          <!-- ?artisti di tendenza/ -->
+        </div>
+        <!-- !corpo principlae con canzoni/ -->
+      </div>
+      <!-- ?parte principale del sito/ -->
+    </main>
+    <!-- *corpo centrale della pagina -->
+
+    <!-- *player del sito -->
+    <footer class="flex">
+      <!-- ?parte sinistra footer -->
+      <div class="footer-song flex">
+        <img class="mr10" src="img/sinister.jpeg" alt="sinister" />
+        <div class="mr25">
+          <div class="white bold">Sinister</div>
+          <div class="bold">Brano nome</div>
+        </div>
+        <div class="icons flex">
+          <i class="fa-regular fa-heart mb5"></i>
+          <i class="fa-regular fa-folder"></i>
+        </div>
+      </div>
+      <!-- ?parte sinistra footer/ -->
+
+      <!-- ?parte centrale footer -->
+      <div class="footer-player flex">
+        <div class="footer-player-top flex">
+          <i class="fa-solid fa-shuffle white mr20"></i>
+          <i class="fa-solid fa-backward-step white mr30"></i>
+          <i class="fa-regular fa-circle-play white mr30"></i>
+          <i class="fa-solid fa-forward-step white mr20"></i>
+          <i class="fa-solid fa-rotate-right white"></i>
+        </div>
+        <div class="footer-player-bottom flex">
+          <span class="white mr10">0.25</span>
+          <div id="big-bar" class="time-bar mr10">
+            <div class="volume-bar"></div>
+          </div>
+          <span class="white">4.35</span>
+        </div>
+      </div>
+      <!-- ?parte cenatrale footer/ -->
+
+      <!-- ?parte destra footer -->
+      <div class="footer-volume flex">
+        <i class="fa-solid fa-list-ul white mr10"></i>
+        <i class="fa-solid fa-desktop white mr10"></i>
+        <i class="fa-solid fa-volume-high white mr10"></i>
+        <div id="small-bar" class="time-bar">
+          <div class="volume-bar"></div>
+        </div>
+      </div>
+      <!-- ?parte destra footer/ -->
+    </footer>
+    <!-- *player del sito/ -->
+  </body>
+</html>
