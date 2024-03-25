@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <!-- !bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- !bootstrap/ -->
+
+    <!-- !my css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- !my css/ -->
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <!-- *container -->
+      <div class="container vh-100">
+        <div class="row bg-dark justify-content-center h-100">
+          <div class="col col-md-6 my-5">
+            <!-- titolo -->
+            <h1 class="text-center text-white mb-4">{{ mainTitle }}</h1>
+
+            <!-- inserimento di un nuovo task -->
+            <div class="mb-3">
+              <label for="new-task" class="form-label text-white"
+                >New Task</label
+              >
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add your new task here..."
+                  aria-describedby="button-addon1"
+                  id="new-task"
+                  v-model="newTask"
+                  @keyup.enter="addTask"
+                />
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  id="button-addon1"
+                  @click="addTask"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+
+            <!-- lista dei task -->
+            <ul class="list-group" v-if="tasks.length > 0">
+              <li
+                v-for="(task, index) in tasks"
+                class="list-group-item d-flex justify-content-between align-items-center"
+                :class="{'text-decoration-line-through' : task.done === true}"
+                @click="isDone(index)"
+              >
+                <div role="button">{{ task.text }}</div>
+
+                <button
+                  type="button"
+                  class="btn-close"
+                  aria-label="Close"
+                  @click.stop="removeTask(index)"
+                ></button>
+              </li>
+            </ul>
+
+            <!-- messaggio di nessun task presente -->
+            <div class="alert alert-danger" role="alert" v-else>
+              There are no tasks in your list, try creating a new one.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- *container/ -->
+    </div>
+
+    <!-- !bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- !bootstrap/ -->
+    <!-- !vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- !vue js -->
+    <!-- !my js -->
+    <script src="js/main.js"></script>
+    <!-- !my js/ -->
+  </body>
+</html>
+
+<!-- !per risolvere il problema dell' evento sul li vado a creare un div che contiene il testo e metto su di lui @isDone, il bottone non interferisce -->
+<!-- <div role="button" @click="isDone(index)">{{ task.text }}</div> -->
+
+<!-- !MEGLIO usa stopPropagation cosi che non si espanda sui figli -->
+<!-- .stop sul click della x -->
