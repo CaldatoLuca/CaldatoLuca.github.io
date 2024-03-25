@@ -1,0 +1,32 @@
+@use "variables.scss" as *;
+
+//!flex
+.flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+//! font style
+.uppercase {
+  text-transform: uppercase;
+}
+//! buttons
+.btn {
+  border: 2px solid;
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn-footer {
+  border-color: $blue-primary;
+  color: white;
+}
+.btn-main {
+  background-color: $blue-primary;
+  border-color: $blue-primary;
+  color: white;
+}
