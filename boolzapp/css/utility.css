@@ -1,0 +1,106 @@
+/* !flex */
+.flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+.around {
+  justify-content: space-around;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+/* !padding */
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+
+/* !padding */
+.p-10 {
+  padding: 0.625rem;
+}
+.p-15 {
+  padding: 0.9375rem;
+}
+.p-20 {
+  padding: 1.25rem;
+}
+
+/* !messaggi */
+.sent {
+  justify-content: flex-end;
+}
+.sent .text {
+  background-color: var(--main-green);
+}
+.received .text {
+  background-color: white;
+}
+/* !margini */
+.mb10 {
+  margin-bottom: 10px;
+}
+/* !font size */
+.large {
+  font-size: larger;
+}
+.small {
+  font-size: smaller;
+}
+/* !dark mode */
+.dark-mode {
+  color: white;
+}
+.dark-mode i {
+  color: white;
+  background-color: var(--grey-700);
+}
+.dark-mode .header-left,
+.dark-mode .header-right,
+.dark-mode .icon-container,
+.dark-mode .left-search,
+.dark-mode .right-search,
+.dark-mode .chat .message-option,
+.dark-mode .delete .chat-option,
+.dark-mode .received .text {
+  background-color: var(--grey-700);
+}
+.dark-mode .contacts li {
+  background-color: var(--grey-600);
+}
+.dark-mode .last-message,
+.dark-mode .time,
+.dark-mode .chat .message-option,
+.dark-mode .received .text,
+.dark-mode .delete .chat-option,
+.dark-mode .right-search i {
+  color: white;
+}
+
+.dark-mode .contacts li:hover {
+  background-color: var(--grey-700);
+}
+.dark-mode .chat,
+.dark-mode .chat .time {
+  color: var(--grey-700);
+}
+.dark-mode .chat i {
+  background-color: transparent;
+  color: var(--grey-700);
+}
