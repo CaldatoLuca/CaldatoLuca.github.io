@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carosello News</title>
+    <!-- !fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/d7e1ca7451.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- !fontawesome/ -->
+    <!-- !my css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- !my css/ -->
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <!-- *header del sito -->
+      <header>
+        <h1>{{ mainTitle }}</h1>
+        <div>
+          Sposta il cursore sull' immagine per fermare il carosello.
+          <span class="red" v-if="eventStop">Stop</span>
+        </div>
+      </header>
+      <!-- *header del sito/ -->
+
+      <!-- *main del sito -->
+      <main>
+        <!-- ?blocco con immagine principale -->
+        <div class="items" @mouseenter="stop" @mouseleave="start">
+          <!-- blocco con immagine e descrizione -->
+          <div class="item active">
+            <img
+              :src="images.src[currentImage]"
+              :alt="images.title[currentImage]"
+            />
+            <div class="img-text">
+              <h3>{{ images.title[currentImage] }}</h3>
+              <p>{{ images.description }}</p>
+            </div>
+          </div>
+
+          <!-- frecce con eventi -->
+          <div class="prev" @click="prev">
+            <i class="fa-solid fa-circle-left"></i>
+          </div>
+          <div class="next" v-on:click="next">
+            <i class="fa-solid fa-circle-right"></i>
+          </div>
+        </div>
+        <!-- ?blocco con immagine principale/ -->
+
+        <!-- ?blocco thumbnails -->
+        <div class="thumbnails">
+          <!-- immagine thumbnail -->
+          <div
+            v-for="(image, index) in images.src"
+            class="thumb"
+            :class="index === currentImage ? 'thumbnail-active ' : '' "
+            @click="changeThumb(index)"
+          >
+            <img :src="image" :alt="`Immagine ${index + 1}`" />
+          </div>
+        </div>
+        <!-- ?blocco thumbnails/ -->
+      </main>
+      <!-- *main del sito/ -->
+    </div>
+
+    <!-- !vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- !vue js -->
+    <!-- !my js -->
+    <script src="js/main.js"></script>
+    <!-- !my js/ -->
+  </body>
+</html>
